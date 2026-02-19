@@ -23,4 +23,6 @@ if status is-interactive # Commands to run in interactive sessions can go here
     alias q 'qs -c ii'
     alias sudo 'sudo-rs'
     alias top 'btop'
+    alias ls 'eza --color=auto'
+    alias vim 'nvim'
 end

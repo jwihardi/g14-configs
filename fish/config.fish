@@ -11,18 +11,24 @@ if status is-interactive # Commands to run in interactive sessions can go here
     # No greeting
     set fish_greeting
 
+    zoxide init fish | source
+
+    alias sudo 'sudo-rs'
+    alias ls 'eza --color=auto --icons'
+    alias cd 'z'
+    alias clear "printf '\033[2J\033[3J\033[1;1H'"
+    alias mkdir 'mkdir -p'
+    alias cat 'bat'
 
     alias reboot 'loginctl reboot'
     alias shutdown 'loginctl poweroff'
+
+    alias ff 'fastfetch'
+    alias q 'qs -c ii'
+    alias top 'btop'
+    alias vim 'nvim'
+
     alias discord 'flatpak run dev.vencord.Vesktop'
     alias spotify 'flatpak run com.spotify.Client'
     alias steam 'flatpak run com.valvesoftware.Steam'
-    alias ff 'fastfetch'
-    alias ls 'eza --icons'	
-    alias clear "printf '\033[2J\033[3J\033[1;1H'"
-    alias q 'qs -c ii'
-    alias sudo 'sudo-rs'
-    alias top 'btop'
-    alias ls 'eza --color=auto'
-    alias vim 'nvim'
 end

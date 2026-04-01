@@ -10,6 +10,11 @@ if status is-interactive # Commands to run in interactive sessions can go here
 
     # No greeting
     set fish_greeting
+    set -x PATH $PATH ~/.go/bin
+
+    set -Ux GOPATH $HOME/.go
+    set -Ux GOBIN $HOME/.local/bin
+    fish_add_path $HOME/.local/bin
 
     zoxide init fish | source
 
